@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62%; }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 45%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center; }
+
+.container {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 50rem;
+  height: 70rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 6fr;
+  grid-template-areas: ".       text1" "text2   ." "blades  blades"; }
+  @supports not (display: grid) {
+    .container {
+      display: none; } }
+  .container .text1 {
+    color: black;
+    font-size: 1.3rem;
+    text-align: start;
+    grid-area: text1;
+    font-weight: 400; }
+  .container .text2 {
+    color: black;
+    text-align: end;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 550;
+    grid-area: text2; }
+    .container .text2 .small {
+      font-weight: 400;
+      font-size: 1.3rem; }
+  .container .blades {
+    justify-items: center;
+    grid-area: blades;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .container .blades .blade {
+      width: 80%;
+      background-color: whitesmoke;
+      background-color: #f26642;
+      border-radius: 5px;
+      height: 100%; }

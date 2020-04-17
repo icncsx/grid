@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62%; }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 52.5%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center; }
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  max-width: 60rem;
+  width: 80vw;
+  height: 80vw;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr); }
+  @supports not (display: grid) {
+    .container {
+      display: none; } }
+  .container .rect1 {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 8;
+    background-color: #3c487c; }
+  .container .rect2 {
+    grid-column: 9 / span 8;
+    grid-row: 1 / span 8;
+    background-color: #3c487c; }
+  .container .rect3 {
+    grid-column: 9 / span 8;
+    grid-row: 9 / span 8;
+    background-color: #8a9eb7; }
+  .container .rect4 {
+    grid-column: 1 / span 8;
+    grid-row: 13 / span 5;
+    background-color: #e7e3e0; }
+  .container .rect5 {
+    grid-column: 1 / span 4;
+    grid-row: 11 / span 2;
+    background-color: #8a9eb7; }
+  .container .rect6 {
+    grid-column: 5 / span 4;
+    grid-row: 9 / span 4;
+    background-color: #36436f; }
+  .container .rect7 {
+    grid-column: 3 / span 2;
+    grid-row: 9 / span 2;
+    background-color: #e7e3e0; }
+  .container .rect8 {
+    grid-column: 1 / span 2;
+    grid-row: 10 / span 1;
+    background-color: #36436f; }
+  .container .rect9 {
+    grid-column: 1 / span 1;
+    grid-row: 9 / span 1;
+    background-color: #e7e3e0; }
+  .container .rect10 {
+    grid-column: 2 / span 1;
+    grid-row: 9 / span 1;
+    background-color: #8a9eb7; }
+  .container .text {
+    grid-column: 9 / span 8;
+    grid-row: 1 / span 8;
+    color: white;
+    align-self: center;
+    text-align: start; }
+    .container .text .small {
+      font-size: 2rem;
+      font-weight: 300; }
+      @media only screen and (max-width: 500px) {
+        .container .text .small {
+          font-size: 1.5rem; } }
+    .container .text .space {
+      margin: 1rem 0rem; }
+    .container .text .big {
+      font-size: 3rem;
+      line-height: 1.1;
+      font-weight: 300; }
+      @media only screen and (max-width: 500px) {
+        .container .text .big {
+          font-size: 2rem; } }
