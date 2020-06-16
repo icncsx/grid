@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study of Grid</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
-    <link rel="icon" 
-      type="image/png" 
-      href="favicon.png">
- 
-</head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
 
-<body>
-
+  <body>
     <main>
       <h1>Study of Grid</h1>
 
       <p>Hover over and click on a grid item</p>
-      <ul id="root" class="staggered">
-      </ul>
-   </main>    
+      <ul id="root" class="staggered"></ul>
+    </main>
+  </body>
 
-</body>
-
-<script>
+  <script>
     window.onload = function () {
-
       var commentary = [
-          "perspective",
-          "chaise",
-          "/3",
-          "iD",
-          "maison",
-          "teal",
-          "book",
-          "taper",
-          "shave",
-          "recursion",
-          "vintage",
-          "opacity",
-      ]
-      
+        "perspective",
+        "chaise",
+        "/3",
+        "iD",
+        "maison",
+        "teal",
+        "book",
+        "taper",
+        "shave",
+        "recursion",
+        "vintage",
+        "opacity",
+      ];
+
       var root = document.getElementById("root");
 
       for (let i = 1; i < 13; i++) {
-
         var newLi = document.createElement("li");
         newLi.innerHTML = `
           <a href="./src/louis${i}/index.html" target="_blank">
             <img src="./src/louis${i}/thumbnail.png" alt="">
           </a>        
-          <p class="center">${commentary[i-1]}</p>
+          <p class="center">${commentary[i - 1]}</p>
         `;
         root.appendChild(newLi);
       }
