@@ -1,0 +1,32 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "live-server --open='./index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icncsx/grid.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "flexbox"
+  ],
+  "author": {
+    "name": "DH Kim",
+    "email": "icncsx@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icncsx/grid/issues"
+  }
+}
